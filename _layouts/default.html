@@ -72,21 +72,20 @@
     @media (max-width: 768px) {
       body {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 15vh 1fr;
+        grid-template-rows: 11.25vh 1fr 8.44vh;
         grid-template-areas:
-          "header"
-          "menu"
-          "main"
-          "footer";
+          "menu header"
+          "menu main"
+          "menu footer";
       }
       nav {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
         padding: 0.5rem;
-        height: auto;
-        width: 50vw;
-        margin: 0 auto;
       }
       header, footer {
         height: auto;
