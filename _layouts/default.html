@@ -21,7 +21,7 @@
     header { grid-area: header; }
     .main { grid-area: main; }
     footer { grid-area: footer; }
-      .grid {
+    .grid {
       position: relative;
       display: grid;
       grid-template-columns: repeat(2, 250px);
@@ -29,7 +29,6 @@
       gap: 2rem;
       z-index: 1;
     }
-
     .box {
       width: 250px;
       height: 250px;
@@ -41,7 +40,6 @@
       overflow: hidden;
       font-weight: bold;
     }
-
     .box img {
       width: 100%;
       height: 100%;
@@ -50,7 +48,6 @@
       top: 0;
       left: 0;
     }
-
     .box span {
       background-color: rgba(0, 0, 0, 0.7);
       color: #fdf2dc;
@@ -60,41 +57,57 @@
       text-align: center;
       width: 100%;
     }
+    #google_translate_element {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 9999;
+    }
   </style>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'fr,de,pt,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-
+  <div id="google_translate_element"></div>
   {% include Menu.html %}
   {% include Header.html %}
   {% include Body.html %}
   {% include Footer.html %}
   <div class="main">
-<div class="grid">
-  <a href="{{ page.link1 }}">
-    <div class="box">
-      <img src="{{ page.pic1 }}" alt="{{ page.text1 }}">
-      <span>{{ page.text1 }}</span>
+    <div class="grid">
+      <a href="{{ page.link1 }}">
+        <div class="box">
+          <img src="{{ page.pic1 }}" alt="{{ page.text1 }}">
+          <span>{{ page.text1 }}</span>
+        </div>
+      </a>
+      <a href="{{ page.link2 }}">
+        <div class="box">
+          <img src="{{ page.pic2 }}" alt="{{ page.text2 }}">
+          <span>{{ page.text2 }}</span>
+        </div>
+      </a>
+      <a href="{{ page.link3 }}">
+        <div class="box">
+          <img src="{{ page.pic3 }}" alt="{{ page.text3 }}">
+          <span>{{ page.text3 }}</span>
+        </div>
+      </a>
+      <a href="{{ page.link4 }}">
+        <div class="box">
+          <img src="{{ page.pic4 }}" alt="{{ page.text4 }}">
+          <span>{{ page.text4 }}</span>
+        </div>
+      </a>
     </div>
-  </a>
-  <a href="{{ page.link2 }}">
-    <div class="box">
-      <img src="{{ page.pic2 }}" alt="{{ page.text2 }}">
-      <span>{{ page.text2 }}</span>
-    </div>
-  </a>
-  <a href="{{ page.link3 }}">
-    <div class="box">
-      <img src="{{ page.pic3 }}" alt="{{ page.text3 }}">
-      <span>{{ page.text3 }}</span>
-    </div>
-  </a>
-  <a href="{{ page.link4 }}">
-    <div class="box">
-      <img src="{{ page.pic4 }}" alt="{{ page.text4 }}">
-      <span>{{ page.text4 }}</span>
-    </div>
-  </a>
-</div>
-</div>
+  </div>
 </body>
 </html>
