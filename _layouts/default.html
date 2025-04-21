@@ -13,11 +13,11 @@
       grid-template-columns: 18.75vh 1fr;
       grid-template-rows: 11.25vh 1fr 8.44vh;
       grid-template-areas:
-        "nav header"
-        "nav main"
-        "nav footer";
+        "menu header"
+        "menu main"
+        "menu footer";
     }
-    nav { grid-area: nav; }
+    nav { grid-area: menu; }
     header { grid-area: header; }
     .main {
       grid-area: main;
@@ -76,14 +76,22 @@
         grid-template-rows: auto auto 1fr auto;
         grid-template-areas:
           "header"
-          "nav"
+          "menu"
           "main"
           "footer";
       }
       nav {
         flex-direction: row;
         justify-content: space-around;
-        padding: 1rem;
+        padding: 0.5rem;
+        height: auto;
+        width: 50vw;
+        margin: 0 auto;
+      }
+      header, footer {
+        height: auto;
+        padding: 0.5rem 1rem;
+        text-align: center;
       }
       .grid {
         grid-template-columns: 1fr;
