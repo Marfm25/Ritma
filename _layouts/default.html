@@ -72,25 +72,20 @@
     @media (max-width: 768px) {
       body {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 11.25vh 10vh 1fr 8.44vh;
+        grid-template-columns: 1fr 10vh;
+        grid-template-rows: 11.25vh 1fr 8.44vh;
         grid-template-areas:
-          "header"
-          "menu"
-          "main"
-          "footer";
+          "header menu"
+          "main menu"
+          "footer menu";
       }
       nav {
-        grid-area: menu;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
+        height: 100%;
         width: 100%;
-        height: auto;
         padding: 0.5rem;
-        transform: rotate(90deg);
-        transform-origin: left bottom;
       }
       header, footer {
         height: auto;
