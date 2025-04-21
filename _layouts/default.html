@@ -72,12 +72,13 @@
     @media (max-width: 768px) {
       body {
         display: grid;
-        grid-template-columns: 10vh 1fr;
-        grid-template-rows: 11.25vh 1fr 8.44vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 11.25vh 10vh 1fr 8.44vh;
         grid-template-areas:
-          "menu header"
-          "menu main"
-          "menu footer";
+          "header"
+          "menu"
+          "main"
+          "footer";
       }
       nav {
         flex-direction: column;
