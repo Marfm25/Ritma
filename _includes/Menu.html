@@ -1,0 +1,75 @@
+<style>
+  nav {
+    background: linear-gradient(to right, #b11d1d, #860000);
+    color: #fdf2dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    width: 18.75vh;
+    height: 100vh;
+  }
+  .logo-top, .logo-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 100px;
+  }
+  .logo-top {
+    top: 1rem;
+  }
+  .logo-bottom {
+    bottom: 1rem;
+  }
+  nav h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 4rem 0 0.5rem 0;
+    z-index: 1;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+    gap: 1rem;
+    z-index: 1;
+  }
+  nav ul li {
+    margin: 0.8rem 0;
+  }
+  nav ul li a {
+    color: #fdf2dc;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  nav.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+
+<nav id="sidebar">
+  <a href="index.html">
+    <img class="logo-top" src="https://raw.githubusercontent.com/Marfm25/Ritma/refs/heads/main/pic/1ritmalogo.png" alt="Ritma Logo Top">
+  </a>
+  <h2 onclick="document.getElementById('sidebar').classList.toggle('active')">MENU</h2>
+  <ul>
+    <li><a href="#">Eco-intervention</a></li>
+    <li><a href="#">Civil Engineering</a></li>
+    <li><a href="#">Landscaping</a></li>
+    <li><a href="#">About Us</a></li>
+  </ul>
+  <a href="index.html">
+    <img class="logo-bottom" src="https://raw.githubusercontent.com/Marfm25/Ritma/refs/heads/main/pic/1ritmalogo.png" alt="Ritma Logo Bottom">
+  </a>
+</nav>
