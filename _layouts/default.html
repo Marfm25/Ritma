@@ -81,12 +81,16 @@
           "footer";
       }
       nav {
-        flex-direction: column;
-        justify-content: flex-start;
+        grid-area: menu;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        height: 100%;
         width: 100%;
+        height: auto;
         padding: 0.5rem;
+        transform: rotate(90deg);
+        transform-origin: left bottom;
       }
       header, footer {
         height: auto;
